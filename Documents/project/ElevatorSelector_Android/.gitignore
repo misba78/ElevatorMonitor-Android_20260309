@@ -1,0 +1,17 @@
+﻿# 빌드 결과물
+.gradle/
+build/
+app/build/
+
+# Android Studio
+.idea/
+*.iml
+local.properties
+
+# 키스토어
+*.jks
+*.keystore
+
+# OS
+.DS_Store
+Thumbs.db
