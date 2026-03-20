@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* src/app/globals.css 맨 아래에 추가 */
+
+html {
+  scroll-behavior: smooth; /* 앵커 이동 시 부드러운 스크롤 적용 */
+}
+
+/* 텍스트 드래그(선택) 시 초록색 테마 적용 */
+::selection {
+  background-color: #dcfce7; /* bg-green-100 */
+  color: #166534; /* text-green-800 */
+}
+
+/* 커스텀 스크롤바 디자인 (웹킷 브라우저 용) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a; /* hover 시 초록색으로 변경 */
+}
